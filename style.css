@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    perspective: 1000px;
+}
+
+.card{
+    position: absolute;
+    top: 170px;
+    left: 230px;
+    width: 280px;
+    height: 380px;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+
+.outside,.inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.outside{
+    background-color: #2C0000;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.outside h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: salmon;
+    margin-bottom: 30px;
+}
+
+.outside p {
+    color: rgb(154, 57, 57);
+    font-size: 30px;
+}
+
+.outside h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: blanchedalmond;
+}
+.outside h4{
+    margin-top: 10px;
+    color: blanchedalmond;
+}
+.ctrl1 {
+    position: relative;
+    margin-top: 10px;
+}
+
+.card2 {
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 150px;
+    right: 160px;
+    width: 40%;
+    height: 460px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.up {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    width: 50%;
+    padding: 2rem 2rem 4rem;
+    border-radius: 30px;
+    background-color: #157476;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+}
+.up h3 {
+    font-family: 'Bodoni Moda', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: blanchedalmond;
+}
+
+.down {
+    position: relative;
+    margin-top: 3.5rem;
+}
+.down img {
+    height: auto;
+    width: 20%;
+    border-radius: 50%;
+}
+.down p {
+    padding: 1rem 2.5rem;
+    text-align: left;
+    font-weight: bold;
+    color: #212121;
+}
+.right-mssg {
+    text-align: right;
+}
+
+@media only screen and (max-width: 460px) {
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 130vh;
+    }
+
+    .card {
+        top: 60px;
+        left: 40px;
+        width: 70%;
+        height: 400px;
+    }
+
+    .card2 {
+        top: 560px;
+        right: 20px;
+        width: 90%;
+        height: 600px;
+    }
+
+    .up {
+        top: -5%;
+        left: 16%;
+        width: 50%;
+        padding: 2rem 2rem 4rem;
+    }
+
+    .down {
+        margin-top: 6.5rem;
+    }
+    .down img {
+        width: 30%;
+    }
+    .down p {
+        font-size: 14px;
+    }
+
+    .ctrl1 {
+        position: relative;
+        left: 0;
+        margin-top: 20px;
+    }
+}
